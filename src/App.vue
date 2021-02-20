@@ -1,5 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <Home />
 </template>
 
@@ -13,4 +12,7 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style lang="postcss">
+#app {
+}
+</style>
