@@ -1,16 +1,17 @@
 <template>
-  <div>
-    这是Home视图
+  <div class="relative w-screen h-screen">
     <Wallpaper />
+    <OnlineSearch />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import OnlineSearch from "./components/OnlineSearch.vue";
 import Wallpaper from "./components/Wallpaper.vue";
 
 export default defineComponent({
   name: "Home",
-  components: { Wallpaper },
+  components: { Wallpaper, OnlineSearch },
 });
 </script>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const service = axios.create({}).request;
+const service = axios.create().request;
 
 const request = service;
 
