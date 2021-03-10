@@ -18,6 +18,8 @@ module.exports = {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
     "vue/no-unused-components": [1],
+    "@typescript-eslint/no-empty-function": [1],
     "@typescript-eslint/explicit-module-boundary-types": [0],
+    "@typescript-eslint/no-explicit-any": [0],
   },
 };

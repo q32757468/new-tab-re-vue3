@@ -1,0 +1,86 @@
+{
+  "id": "2236084",
+  "name": "chrome-extension-new-tab-re",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "重制版chrome扩展新标签页",
+  "glyphs": [
+    {
+      "icon_id": "18522264",
+      "name": "展开",
+      "font_class": "arrow-up",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "6504335",
+      "name": "编辑",
+      "font_class": "edit",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "18461925",
+      "name": "本地",
+      "font_class": "local",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "15267593",
+      "name": "拉取数据",
+      "font_class": "fetch",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
+      "icon_id": "6475781",
+      "name": "加号",
+      "font_class": "plus",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11929954",
+      "name": "加号",
+      "font_class": "plus-bold",
+      "unicode": "f320",
+      "unicode_decimal": 62240
+    },
+    {
+      "icon_id": "11861955",
+      "name": "删除／数字面板编辑态",
+      "font_class": "delete",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "15070440",
+      "name": "删除筛选项",
+      "font_class": "delete-bold",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "17137174",
+      "name": "谷歌",
+      "font_class": "google",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "14055556",
+      "name": "百度",
+      "font_class": "baidu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "6539860",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

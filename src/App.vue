@@ -11,8 +11,3 @@ export default defineComponent({
   components: { Home },
 });
 </script>
-
-<style lang="postcss">
-#app {
-}
-</style>
