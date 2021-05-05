@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="relative inline-flex items-center bg-white rounded w-190">
+    <div
+      :class="`onlineSearch_wrap relative inline-flex items-center bg-white rounded w-190 ${
+        !suggestionsVisible ? 'opacity-80' : ''
+      }`"
+    >
       <OnlineSearchSelect v-model="selectedEngine" :datas="searchEngines" />
       <input
         class="outline-none h-11 bg-transparent flex-1 text-gray-700"
@@ -68,7 +72,7 @@ export default defineComponent({
     const keyWord = ref("");
     const inputKeyWord = ref(""); // 存储键盘键入的关键字
     const suggestions = ref<SearchSuggestion[]>([]);
-    const suggestionsVisible = ref(true);
+    const suggestionsVisible = ref(false);
     const activeSuggestionIndex = ref(-1);
 
     const keyWordFormatted = computed(() => {
