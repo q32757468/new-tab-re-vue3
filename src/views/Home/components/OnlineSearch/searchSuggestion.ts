@@ -5,14 +5,10 @@ export enum SuggestionType {
 
 class Suggestion {
   type: SuggestionType;
-  content: string | JSX.Element;
+  content: string;
   text: string;
 
-  constructor(
-    type: SuggestionType,
-    text: string,
-    content?: string | JSX.Element
-  ) {
+  constructor(type: SuggestionType, text: string, content?: string) {
     this.type = type;
     this.text = text;
     this.content = content || text;

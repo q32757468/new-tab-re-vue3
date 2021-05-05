@@ -11,3 +11,20 @@ export function parseJsonpToJson<T = any>(datas: string): T {
   // }
   // return jsonData;
 }
+
+export function formatUrlPrefix(url: string) {
+  if (!url) return "";
+  if (!url.startsWith("http")) {
+    return "http://" + url;
+  } else {
+    return url;
+  }
+}
+
+export function getBase64(img: Blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => resolve(reader.result));
+    reader.readAsDataURL(img);
+  });
+}
