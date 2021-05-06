@@ -2,7 +2,7 @@
   <div>
     <div
       :class="`onlineSearch_wrap relative inline-flex items-center bg-white rounded w-190 ${
-        !suggestionsVisible ? 'opacity-80' : ''
+        !inputIsfocus ? 'opacity-80' : ''
       }`"
     >
       <OnlineSearchSelect v-model="selectedEngine" :datas="searchEngines" />
@@ -13,7 +13,7 @@
         @input="handleInputChange_debounce"
         @keydown="handleInputKeyDown"
         @focus="handleInputFocus"
-        @blur="suggestionsVisible = false"
+        @blur="handleInputBlur"
       />
       <button class="h-full pr-4" @click="submitSearch">
         <Icon :name="'search'" class="text-lg" />
@@ -73,6 +73,7 @@ export default defineComponent({
     const inputKeyWord = ref(""); // 存储键盘键入的关键字
     const suggestions = ref<SearchSuggestion[]>([]);
     const suggestionsVisible = ref(false);
+    const inputIsfocus = ref(false);
     const activeSuggestionIndex = ref(-1);
 
     const keyWordFormatted = computed(() => {
@@ -205,6 +206,12 @@ export default defineComponent({
     const handleInputFocus = () => {
       handleInputChange();
       suggestionsVisible.value = true;
+      inputIsfocus.value = true;
+    };
+
+    const handleInputBlur = () => {
+      suggestionsVisible.value = false;
+      inputIsfocus.value = false;
     };
 
     const handleSuggesClick = (content: string) => {
@@ -228,6 +235,7 @@ export default defineComponent({
       selectedEngine,
       keyWord,
       suggestionsVisible,
+      inputIsfocus,
       activeSuggestionIndex,
       submitSearch,
       handleInputKeyDown,
@@ -235,6 +243,7 @@ export default defineComponent({
       handleInputChange,
       handleInputChange_debounce,
       handleInputFocus,
+      handleInputBlur,
       handleSuggesClick,
       handleSuggesDelete,
     };
